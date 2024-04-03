@@ -27,5 +27,51 @@ x = 234
 print(x) # 234
 ```
 Concatenation: there are different ways to [concatenate string](https://stackoverflow.com/questions/21542694/difference-between-using-commas-concatenation-and-string-formatters-in-python)
+## f-strings
+Probably the best way to format printouts, with flexibility in using variables and easy syntax
+```
+result = 10 * 25
+print(f"The result is {results}
+```
 
-fstrings:
+NB: 
+* 'f' is within the brackets (i.e., the function is still *print*, not *printf*)
+* Triple quotation marks are compatible:
+```
+x = 27
+y = 15
+
+print(f"""{x} + {y} = {x+y}
+{x} - {y} = {x-y}
+{x} * {y} = {x*y}
+{x} / {y} = {x/y}""")
+```
+
+## Arithmetic
+Most are already familiar functions. Some new ones:
+```
+// -> division (integer)
+/ -> division (floating point)
+% -> modulo
+** -> exponentiation
+```
+
+input() produces a string data type result. To use the input in arithmetic, cast it as your desired data type:
+```
+x = int(input("Please type in a number:"))
+print(f"{x} times 5 is {x*5}")
+```
+
+You can use operator assignment shorthands to simplify code:
+```
+x += 4; is the same as x = x + 4;
+x -= 4; is the same as x = x - 4;
+```
+
+NB:
+* Operators (+, -, /, * etc.) work on an operand (2, 3, 4.5)
+* The data type of an operand usually determines the resulting datatype
+## Conditional Statements
+Conditional statements are similar to ones in SQL, with a key exception being that `==` is used for the equality operator rather than `=`
+
+Conditionals used in a conditional statement will result in a truth value: True or False. These are boolean values.
